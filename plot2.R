@@ -4,7 +4,7 @@
 
 ### Import data
 if (file.exists(data_file = "household_power_consumption.txt")) {
-  data <- read.csv("../household_power_consumption.txt",
+  data <- read.csv(data_file,
                    colClasses = c("character","character",rep("numeric",7)),
                    na.strings =  "?", sep = ";")
   
