@@ -4,9 +4,9 @@
 
 ### Import data
 if (file.exists(data_file = "household_power_consumption.txt")) {
-  data <- read.csv(data_file,
-                   colClasses = c("character","character",rep("numeric",7)),
-                   na.strings =  "?", sep = ";")
+  data <- read.csv(data_file, 
+        colClasses = c("character","character",rep("numeric",7)),
+        na.strings =  "?", sep = ";")
   
   ### Trim data to use only from the dates 2007-02-01 and 2007-02-02
   data <- data[data$Date=="1/2/2007" | data$Date=="2/2/2007",]
